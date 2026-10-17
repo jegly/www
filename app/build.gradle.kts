@@ -66,15 +66,15 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach 
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.19.0")
+    implementation("androidx.core:core-ktx:1.19.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.11.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.11.0")
     implementation("androidx.activity:activity-compose:1.13.0")
-    implementation(platform("androidx.compose:compose-bom:2026.06.01"))
+    implementation(platform("androidx.compose:compose-bom:2026.09.00"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.material:material-icons-extended")
-    implementation("androidx.navigation:navigation-compose:2.9.8")
+    implementation("androidx.navigation:navigation-compose:2.10.2")
     implementation("androidx.browser:browser:1.10.0")
     // Feature-detected WebView APIs: algorithmic darkening (force-dark web content) and the
     // ProxyController that an Orbot/Tor option would need later.
@@ -86,9 +86,9 @@ dependencies {
     implementation("com.google.crypto.tink:tink-android:1.19.0")
 
     // Room & SQLCipher
-    implementation("androidx.room:room-runtime:2.8.4")
-    implementation("androidx.room:room-ktx:2.8.4")
-    "ksp"("androidx.room:room-compiler:2.8.4")
+    implementation("androidx.room:room-runtime:2.8.5")
+    implementation("androidx.room:room-ktx:2.8.5")
+    "ksp"("androidx.room:room-compiler:2.8.5")
     implementation("net.zetetic:sqlcipher-android:4.14.1@aar")
     implementation("androidx.sqlite:sqlite-ktx:2.6.2")
 
@@ -100,8 +100,8 @@ dependencies {
     // Hilt
     implementation("com.google.dagger:hilt-android:2.59.2")
     "ksp"("com.google.dagger:hilt-compiler:2.59.2")
-    implementation("androidx.hilt:hilt-navigation-compose:1.3.0")
-    implementation("androidx.hilt:hilt-lifecycle-viewmodel-compose:1.3.0")
+    implementation("androidx.hilt:hilt-navigation-compose:1.4.0")
+    implementation("androidx.hilt:hilt-lifecycle-viewmodel-compose:1.4.0")
 
     // Compose image loader, for favicons. Routed through our hardened OkHttp (DoH, HTTPS, size caps).
     implementation("io.coil-kt.coil3:coil-compose:3.0.4")
