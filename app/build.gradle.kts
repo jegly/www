@@ -94,8 +94,8 @@ dependencies {
 
     // Networking. Retrofit is gone with the feed API; OkHttp stays because the DoH resolver,
     // private-network guard, and Coil's image fetcher are all built on it.
-    implementation("com.squareup.okhttp3:okhttp:4.12.0")
-    implementation("com.squareup.okhttp3:okhttp-dnsoverhttps:4.12.0")
+    implementation("com.squareup.okhttp3:okhttp:5.5.0")
+    implementation("com.squareup.okhttp3:okhttp-dnsoverhttps:5.5.0")
 
     // Hilt
     implementation("com.google.dagger:hilt-android:2.59.2")
