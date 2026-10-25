@@ -28,8 +28,8 @@ android {
         applicationId = "com.jegly.www"
         minSdk = 33
         targetSdk = 37
-        versionCode = 2
-        versionName = "0.1.1"
+        versionCode = 3
+        versionName = "0.1.2"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -78,7 +78,7 @@ dependencies {
     implementation("androidx.browser:browser:1.10.0")
     // Feature-detected WebView APIs: algorithmic darkening (force-dark web content) and the
     // ProxyController that an Orbot/Tor option would need later.
-    implementation("androidx.webkit:webkit:1.16.0")
+    implementation("androidx.webkit:webkit:1.17.0")
 
     // Security
     implementation("androidx.security:security-crypto:1.1.0")
