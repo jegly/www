@@ -28,8 +28,8 @@ android {
         applicationId = "com.jegly.www"
         minSdk = 33
         targetSdk = 37
-        versionCode = 3
-        versionName = "0.1.2"
+        versionCode = 4
+        versionName = "0.1.3"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -78,7 +78,7 @@ dependencies {
     implementation("androidx.browser:browser:1.10.0")
     // Feature-detected WebView APIs: algorithmic darkening (force-dark web content) and the
     // ProxyController that an Orbot/Tor option would need later.
-    implementation("androidx.webkit:webkit:1.17.0")
+    implementation("androidx.webkit:webkit:1.18.0")
 
     // Security
     implementation("androidx.security:security-crypto:1.1.0")
@@ -89,13 +89,13 @@ dependencies {
     implementation("androidx.room:room-runtime:2.8.5")
     implementation("androidx.room:room-ktx:2.8.5")
     "ksp"("androidx.room:room-compiler:2.8.5")
-    implementation("net.zetetic:sqlcipher-android:4.14.1@aar")
-    implementation("androidx.sqlite:sqlite-ktx:2.6.2")
+    implementation("net.zetetic:sqlcipher-android:4.19.1@aar")
+    implementation("androidx.sqlite:sqlite-ktx:2.7.1")
 
     // Networking. Retrofit is gone with the feed API; OkHttp stays because the DoH resolver,
     // private-network guard, and Coil's image fetcher are all built on it.
-    implementation("com.squareup.okhttp3:okhttp:5.5.0")
-    implementation("com.squareup.okhttp3:okhttp-dnsoverhttps:5.5.0")
+    implementation("com.squareup.okhttp3:okhttp:5.5.1")
+    implementation("com.squareup.okhttp3:okhttp-dnsoverhttps:5.5.1")
 
     // Hilt
     implementation("com.google.dagger:hilt-android:2.60.1")
