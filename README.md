@@ -6,7 +6,7 @@
 
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.0-cba6f7.svg?logo=kotlin&logoColor=cdd6f4&labelColor=1e1e2e)](https://kotlinlang.org)
 [![Android](https://img.shields.io/badge/Android-13%2B-a6e3a1.svg?logo=android&logoColor=cdd6f4&labelColor=1e1e2e)](https://developer.android.com)
-[![Version](https://img.shields.io/badge/Version-0.1.1-89b4fa.svg?labelColor=1e1e2e)](https://github.com/jegly/www/releases)
+[![Version](https://img.shields.io/badge/Version-0.1.3-89b4fa.svg?labelColor=1e1e2e)](https://github.com/jegly/www/releases)
 [![License](https://img.shields.io/badge/License-GPL%20v3-fab387.svg?labelColor=1e1e2e)](LICENSE) [![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-Material%203-b4befe.svg?logo=jetpackcompose&logoColor=cdd6f4&labelColor=1e1e2e)](https://developer.android.com/jetpack/compose)
 
 If this project helped you, please ⭐️ star it. **Also try [RSS](https://github.com/jegly/rss)** — the privacy-first feed reader this browser was forked from.
@@ -124,6 +124,27 @@ all, plus real encryption at rest that most don't offer:
 3. Open the APK and tap Install
 
 Requires Android 13+.
+
+## Release signing
+
+Release APKs use hybrid signing (APK Signature Scheme v3.2): the original app key plus an EC P-384 key and an ML-DSA-87 post-quantum key. Android 17 and newer verify the hybrid block, where the ML-DSA-87 key is the signer; earlier Android versions verify the original key as before.
+
+| File | SHA-256 |
+| --- | --- |
+| `WWW-0.1.3-PQC-signed.apk` | `2f89e05accdc754c0320e3033ac9166fc5b770861fe873a4692ad19fb7aa4cbb` |
+
+Verify a download:
+
+```bash
+sha256sum WWW-0.1.3-PQC-signed.apk
+apksigner verify -v --print-certs WWW-0.1.3-PQC-signed.apk   # build-tools 37.0.0 on JDK 25 shows all three keys
+```
+
+Signing certificate SHA-256:
+
+- ML-DSA-87 (post-quantum): `5f99de5b3195753d4fe8ddabebd2fb27356b2109d6fbb2471fcbbdf21a9e76a6`
+- EC P-384 (hybrid classical): `fa8f4a07e6a4f2b7dc6e5ab31fc05592b1414ab9436d1e2e39b35ce3bb2e33a2`
+- Original key: `98d324d4106a368c62729a0a24d9ac9a6b47f8ac4c6585348531f0ee4eb6a04c`
 
 ## Build from Source
 
