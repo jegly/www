@@ -28,8 +28,9 @@ android {
         applicationId = "com.jegly.www"
         minSdk = 33
         targetSdk = 37
-        versionCode = 4
-        versionName = "0.1.3"
+        // CI release builds pass these; local builds use the defaults.
+        versionCode = providers.gradleProperty("appVersionCode").map(String::toInt).getOrElse(4)
+        versionName = providers.gradleProperty("appVersionName").getOrElse("0.1.3")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
