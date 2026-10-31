@@ -6,7 +6,7 @@
 
 [![Kotlin](https://img.shields.io/badge/Kotlin-2.0-cba6f7.svg?logo=kotlin&logoColor=cdd6f4&labelColor=1e1e2e)](https://kotlinlang.org)
 [![Android](https://img.shields.io/badge/Android-13%2B-a6e3a1.svg?logo=android&logoColor=cdd6f4&labelColor=1e1e2e)](https://developer.android.com)
-[![Version](https://img.shields.io/badge/Version-0.1.3-89b4fa.svg?labelColor=1e1e2e)](https://github.com/jegly/www/releases)
+[![Version](https://img.shields.io/badge/Version-0.1.4-89b4fa.svg?labelColor=1e1e2e)](https://github.com/jegly/www/releases)
 [![License](https://img.shields.io/badge/License-GPL%20v3-fab387.svg?labelColor=1e1e2e)](LICENSE) [![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-Material%203-b4befe.svg?logo=jetpackcompose&logoColor=cdd6f4&labelColor=1e1e2e)](https://developer.android.com/jetpack/compose)
 
 If this project helped you, please ⭐️ star it. **Also try [RSS](https://github.com/jegly/rss)** — the privacy-first feed reader this browser was forked from.
@@ -131,13 +131,13 @@ Release APKs use hybrid signing (APK Signature Scheme v3.2): the original app ke
 
 | File | SHA-256 |
 | --- | --- |
-| `WWW-0.1.3-PQC-signed.apk` | `2f89e05accdc754c0320e3033ac9166fc5b770861fe873a4692ad19fb7aa4cbb` |
+| `www-0.1.4-PQC-signed.apk` | `874c2db57f49be3e7835c8e4e414d08dac894d2e918f93699a1ccd9e52495658` |
 
 Verify a download:
 
 ```bash
-sha256sum WWW-0.1.3-PQC-signed.apk
-apksigner verify -v --print-certs WWW-0.1.3-PQC-signed.apk   # build-tools 37.0.0 on JDK 25 shows all three keys
+sha256sum www-0.1.4-PQC-signed.apk
+apksigner verify -v --print-certs www-0.1.4-PQC-signed.apk   # build-tools 37.0.0 on JDK 25 shows all three keys
 ```
 
 Signing certificate SHA-256:
